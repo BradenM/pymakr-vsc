@@ -20,7 +20,8 @@ jobs:
       - name: Install Windows Build Tools
         if: matrix.os == 'windows-latest'
         run: |
-          # installl windows toolchain 
+          # install windows toolchain 
+          choco upgrade python2 visualstudio2017-workload-vctools
           npm install -g --production windows-build-tools
           npm install -g node-gyp
 
