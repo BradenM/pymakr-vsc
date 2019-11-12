@@ -19,6 +19,7 @@ jobs:
 
       - name: Install Windows Build Tools
         if: matrix.os == 'windows-latest'
+        shell: bash
         run: |
           # install windows toolchain 
           choco upgrade python2 visualstudio2017-workload-vctools
