@@ -1,3 +1,27 @@
+## Current State:
+
+Branch | OS | Build  | Electron Test
+--------|-|--------|--
+master | |![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=master)
+ " | Windows | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=master&jobName=Build%20windows-latest )
+  " | Linux | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=master&jobName=Build%20ubuntu-latest )
+ "| MacOS | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=master&jobName=Build%20macos-latest )
+ ||
+fix/Serialport_804 || ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=fix/SerialMultiPlatform_804 )
+ " | Windows | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=fix/SerialMultiPlatform_804&jobName=Build%20windows-latest )
+  " | Linux | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=fix/SerialMultiPlatform_804&jobName=Build%20ubuntu-latest )
+ "| MacOS | ![Build Status](https://github.com/Josverl/pymakr-vsc/workflows/Build%20Pymakr/badge.svg?branch=fix/SerialMultiPlatform_804&jobName=Build%20macos-latest )
+
+
+## 1.1.6-beta - Stability improvments 
+- update to serialport 8.0.5 
+- add automated tests for serialport & multiple electron versions 
+
+## 1.1.5 - Compatibility vscode 1.40
+- Windows (x64/ia32) and MacOS and Linx (x64) compatibility with vscode 1.40
+- Long term fix that should also prevent issues with future updates 
+
+
 ## 1.1.4 - Electron Multiplatform 
 - Provide improved stability by including serialport native modules for current and future electron versions. Fixes multiple serialport issues
 
