@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-    name: Build ${{ matrix.os }}
+    name: Build ${{ matrix.os }} test-electron ${{matrix.electron_ver}}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest] #, ubuntu-latest, macos-latest]
-        electron-ver: [6.1.2, 7.1.1, 4.2.5 ]
+        os: [windows-latest, macos-latest] #, ubuntu-latest]
+        electron-ver: [6.1.2, 7.1.1]
     steps:
       - uses: actions/checkout@v1
 
