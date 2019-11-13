@@ -31,9 +31,13 @@ jobs:
       - name: Update Native Modules
         run: npm run download-native
 
-      # TODO
-      # - name: Test Bindings
+      - name: Build pymakr-vsc
+        run: npm run build
 
+      # generic all up electron test 
+      - name: Test Bindings
+        run: npm run test-electron
+  
       # No tests written :(
       # - name: Run Tests
       #   run: npm run test
