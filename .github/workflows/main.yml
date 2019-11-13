@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build ${{ matrix.os }} test-electron ${{matrix.electron_ver}}
+    name: Build ${{ matrix.os }} against ${{matrix.electron-ver}}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
