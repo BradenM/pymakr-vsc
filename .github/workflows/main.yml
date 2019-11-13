@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest] #, ubuntu-latest, macos-latest]
+        electron-ver: [6.1.2, 7.1.1, 4.2.5 ]
     steps:
       - uses: actions/checkout@v1
 
@@ -36,7 +37,7 @@ jobs:
 
       # generic all up electron test 
       - name: Test Bindings
-        run: npm run test-electron
+        run: npm run test-electron -- ${{ matrix.electron-ver }}
   
       # No tests written :(
       # - name: Run Tests
