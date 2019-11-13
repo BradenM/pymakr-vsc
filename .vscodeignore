@@ -8,7 +8,6 @@ jsconfig.json
 #No github templates
 .github/*
 doc/*
-CHANGELOG.MD
 
 # TEST Artefacts 
 .vscode-test/**
