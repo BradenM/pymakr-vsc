@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-latest,  ubuntu-latest]
+        os: [windows-latest, macos-latest, ubuntu-latest]
         electron-ver: [6.1.2, 7.1.1]
     steps:
       - uses: actions/checkout@v1
@@ -35,10 +35,10 @@ jobs:
       - name: Build pymakr-vsc
         run: npm run build
 
-      # generic all up electron test 
+      # generic all up electron test
       - name: Test Bindings
-        run: npm run test-electron -- ${{ matrix.electron-ver }}
-  
+        run: npx xvfb-maybe -e /dev/stdout -a npm run test-electron -- ${{ matrix.electron-ver }}
+
       # No tests written :(
       # - name: Run Tests
       #   run: npm run test
